@@ -1,0 +1,18 @@
+<div id="sidebar">
+  <mat-nav-list>
+    <div mat-list-item class="menu-title">
+      MENU
+    </div>
+    <div class="hr"></div>
+    <a 
+      mat-list-item
+      [routerLinkActive]="'active'"
+      [routerLink]="['/dashboard']"
+    >
+      <mat-icon class="sidenav-icon">dashboard</mat-icon>  Dashboard 
+    </a>
+    <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/users']" >
+      <mat-icon class="sidenav-icon">dashboard</mat-icon> Users
+    </a>
+  </mat-nav-list>
+</div>

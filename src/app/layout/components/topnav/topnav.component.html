@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" class="fix-nav top-nav-wrapper">
+    <button
+      type="button"
+      mat-icon-button
+      class="visible-md btn-toggle"
+      (click)="toggleSidebar()"
+    >
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <div class="nav-brand">
+      <a>
+        <img src="../../../../assets/images/loremipsum-logo 1.png" />
+      </a>
+    </div>
+    <span class="nav-spacer"></span>
+  
+    <button mat-icon-button class="notification-btn">
+      <span matBadge="3" matBadgeColor="warn" class="material-icons-outlined">
+        add_alert
+      </span>
+    </button>
+    <button
+      class="hidden-sm avtar-cover"
+      mat-icon-button
+      style="line-height: 0px;padding-top: 18px;"
+    >
+      <span class="avtar" style="padding-top: 20px;">AP</span>
+    </button>
+   
+    <!-- user dropdown menu ends here -->
+  </mat-toolbar>
+  

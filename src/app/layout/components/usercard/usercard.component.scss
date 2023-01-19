@@ -1,0 +1,50 @@
+@import "../../../../styles/variables.scss";
+
+:host {
+  .user-card-single {
+    width: 240px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    header {
+      position: absolute;
+      transform: translate(50px, -50px);
+      img {
+        max-width: 110px;
+        border: 10px solid $whiteBg;
+        border-radius: 100px;
+      }
+      .card-image-icon {
+        color: $whiteBg;
+        font-size: 16px;
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        border: 2px solid $whiteBg;
+        border-radius: 50%;
+        background-color: $userCardIconBg;
+        padding: 6px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    main {
+      background-color: $whiteBg;
+      border-radius: $userCardMainBorderRad;
+      padding: 100px 15px 15px 15px;
+      text-align: center;
+      .name {
+        color: $userCardNameColor;
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: 22px;
+        padding: 17px 0px;
+        margin: 0px;
+      }
+      .content {
+        font-size: 16px;
+        color: #506e85;
+      }
+    }
+  }
+}

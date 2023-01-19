@@ -1,0 +1,134 @@
+@import "../../../styles/variables.scss";
+
+:host {
+  h3 {
+    margin: 0px 10px;
+    font-size: 16px;
+  }
+
+  .users-box-top {
+    background-color: #fff;
+    border-radius: 8px;
+    header {
+      padding: 13px;
+      .view-toggle-btn {
+        border: 1px solid $listGridBtnBorderColor;
+        border-radius: 3px;
+        padding: 2px;
+        cursor: pointer;
+        .list-view {
+          border-right: 1px solid $listGridBtnBorderColor;
+        }
+        .active {
+          color: $primaryThemeColor;
+        }
+      }
+    }
+    main {
+      background-color: #f8fbfd;
+      padding: 10px 46px;
+      border-top: 1px solid #f0f5fb;
+      border-bottom: 1px solid #f0f5fb;
+    }
+  }
+  .user-table-cover {
+    background-color: $whiteBg;
+    border-radius: 8px;
+    padding: 10px 0px;
+    margin-bottom: 15px;
+    .user-job,
+    .user-doj {
+      color: $tableTextColor;
+    }
+    ::ng-deep .dataTables_length {
+      padding-left: 50px;
+      margin-bottom: 10px;
+      select {
+        border-color: #acc0d0;
+        padding: 6px !important;
+      }
+    }
+    ::ng-deep .dataTables_info {
+      padding-left: 50px;
+    }
+    ::ng-deep .dataTables_filter {
+      margin-bottom: 10px;
+      padding-right: 10px;
+      input {
+        padding: 7px !important;
+        border-color: #acc0d0;
+      }
+    }
+    ::ng-deep .dataTables_paginate {
+      padding-right: 10px;
+    }
+    ::ng-deep .dataTables_paginate {
+      .first,
+      .previous,
+      .next,
+      .last {
+        display: none;
+      }
+      .paginate_button {
+        &:hover {
+          background: none;
+          border: 1px solid $primaryThemeColor;
+          color: #000 !important;
+        }
+      }
+      .current {
+        background: none;
+        background-color: $primaryThemeColor;
+        color: #fff !important;
+      }
+    }
+    .user-table {
+      border-bottom: 1px solid #e1edf1;
+      border-top: 1px solid #e1edf1;
+      thead tr th {
+        text-transform: capitalize;
+        text-align: left;
+        padding: 10px 10px !important;
+        border-bottom: 1px solid #e1edf1;
+      }
+      tbody {
+        tr {
+          &:nth-child(odd) {
+            background-color: $userTableOddBg;
+          }
+          td {
+            border-top: 1px solid #e1edf1;
+            img {
+              max-width: 50px;
+              border-radius: 50%;
+              border: 3px solid $userTableAvatarBorderColor;
+            }
+          }
+        }
+      }
+      .user-name {
+        font-size: 18px;
+        color: $userTableTitleColor;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    .user-table-cover {
+      overflow-x: scroll;
+    }
+  }
+  @media screen and (max-width: 668px) {
+    ::ng-deep .dataTables_length,
+    ::ng-deep .dataTables_info {
+      padding-left: 20px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .user-table .user-image {
+      padding-left: 50px;
+    }
+  }
+}

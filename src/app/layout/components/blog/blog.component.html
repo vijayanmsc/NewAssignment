@@ -1,0 +1,12 @@
+<article *ngFor="let post of posts">
+    <header>
+      <div class="blog-img-wrapper">
+        <img class="blog-image" [src]="'../../../../assets/images/card-2.jpg'" />
+      </div>
+      <span style="color: black;font-weight: bold;padding-bottom: 20px;">{{ post.title }}</span>
+    </header>
+    <main>
+    <p style="padding-top: 10px;">  {{ post.description }} </p>
+    </main>
+  </article>
+  

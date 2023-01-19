@@ -1,0 +1,47 @@
+@import "@angular/material/theming";
+@import "../../../../styles/variables.scss";
+
+:host {
+  ::ng-deep .mat-icon {
+    width: auto;
+    height: auto;
+    color: $primaryThemeColor;
+  }
+  ::ng-deep .mat-card-header-text {
+    width: 100%;
+    text-align: right;
+  }
+
+  .icon-lg {
+    font-size: 40px;
+  }
+
+  .mat-card {
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 1px 1px -1px rgb(0 0 0 / 37%);
+    .mat-card-header {
+      width: 100%;
+    }
+    .mat-card-title {
+      font-size: 40px !important;
+      font-weight: 700;
+      line-height: 48px;
+      color: #000;
+    }
+    .mat-card-subtitle {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 25px;
+      color: #839db3;
+    }
+
+    .mat-card-actions {
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+  }
+}

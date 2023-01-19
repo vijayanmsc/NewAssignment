@@ -1,0 +1,66 @@
+<article fxLayout="column">
+    <section class="mb-20 dash-box-top pb10" fxLayout="column" fxFlex>
+      <header fxFlex fxLayoutAlign="start center">
+        <mat-icon class="icon-lg">view_list</mat-icon>
+        <span style="padding-left: 10px;font-weight: bold;color: blue;">Home</span>
+      </header>
+      <main fxFlex>
+        Home Page Description
+      </main>
+    </section>
+    <!-- top header box ends here -->
+  
+    <section
+      class="mb-20"
+      fxLayout="row"
+      fxLayout.lt-md="column"
+      fxLayoutGap="20px"
+    >
+      <div fxFlex>
+        <app-status
+          [icon]="'shopping_cart'"
+          [count]="345"
+          [label]="'Total Orders'"
+        ></app-status>
+      </div>
+      <div fxFlex>
+        <app-status
+          [icon]="'account_balance_wallet'"
+          [count]="267"
+          [label]="'Total Expenses'"
+        ></app-status>
+      </div>
+      <div fxFlex>
+        <app-status
+          [icon]="'assessment'"
+          [count]="345"
+          [label]="'Total Revenue'"
+        ></app-status>
+      </div>
+      <div fxFlex>
+        <app-status
+          [icon]="'person'"
+          [count]="345"
+          [label]="'New Users'"
+        ></app-status>
+      </div>
+    </section>
+    <!-- application status box ends here -->
+  
+    <section class="mb-20 dash-box-blog pb10" fxLayout="column" fxFlex>
+      <header fxFlex fxLayoutAlign="start center">
+        <mat-icon class="icon-lg">view_list</mat-icon>
+        <h3>Recent Blogs</h3>
+      </header>
+      <main fxFlex>
+        <app-blog
+          fxLayout="row"
+          fxLayout.lt-md="column"
+          fxLayoutGap="20px"
+          [posts]="posts"
+        ></app-blog>
+      </main>
+    </section>
+    <!-- recent blogs section ends here -->
+  </article>
+  

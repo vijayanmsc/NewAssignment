@@ -1,0 +1,31 @@
+:host {
+    article {
+      header {
+        h4 {
+          font-size: 20px;
+          line-height: 25px;
+          font-weight: 700;
+          text-transform: capitalize;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+        img {
+          max-width: 133px;
+          border-radius: 4px;
+        }
+      }
+    }
+    @media screen and (max-width: 668px) {
+      article {
+        margin-bottom: 30px !important;
+        .blog-img-wrapper {
+          max-height: 200px;
+          overflow: hidden;
+          .blog-image {
+            max-width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+  

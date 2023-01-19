@@ -1,0 +1,23 @@
+@import "variables.scss";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: $baseFont;
+  background-color: $bodyBg;
+  color: $primaryTextColor;
+}
+
+.main-container {
+  position: absolute;
+  top: 64px;
+  left: 170px;
+  right: 0;
+  bottom: 0;
+  padding: 25px 15px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}

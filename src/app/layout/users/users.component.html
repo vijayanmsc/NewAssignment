@@ -1,0 +1,68 @@
+<article fxLayout="column">
+  <section class="mb-20 users-box-top pb10" fxLayout="column" fxFlex>
+    <header fxFlex fxLayoutAlign="space-between" fxLayout="row">
+      <div fxLayout="row" fxLayoutAlign="start center">
+        <mat-icon class="icon-lg">view_list</mat-icon>
+        <span style="padding-left: 10px;font-weight: bold;color: blue;">Users</span>
+      </div>
+      <div fxLayout="row" class="view-toggle-btn">
+        <mat-icon
+          class="icon-lg list-view"
+          [ngClass]="{ active: isListView }"
+          (click)="toggleView(listView, true)"
+          >view_list</mat-icon
+        >
+        <mat-icon
+          class="icon-lg grid-view"
+          [ngClass]="{ active: !isListView }"
+          (click)="toggleView(gridView, false)"
+          >view_module</mat-icon
+        >
+      </div>
+    </header>
+    <main fxFlex>Total Users: {{ userCount }}</main>
+  </section>
+</article>
+
+<article fxLayout="column">
+  <ng-template #listView>
+    <div class="user-table-cover">
+      <table
+        datatable
+        [dtOptions]="dtOptions"
+       
+        class="row-border hover user-table"
+      >
+        <thead>
+          <tr>
+            <th></th>
+            <th>name</th>
+            <th>designation</th>
+            <th>joining date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td class="user-image">
+              <img [src]="'../../../assets/images/team-2.jpg'" />
+            </td>
+            <td class="user-name">{{ user.name }}</td>
+            <td class="user-job">{{ user.job_title }}</td>
+            <td class="user-doj">{{ user.join_date | date: "d MMM y" }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-template> 
+  <!-- user table list view ends here -->
+
+  <ng-template #gridView>
+    <app-usercard [users]="users"></app-usercard>
+  </ng-template>
+  <!-- user grid view ends here -->
+
+  <!-- container for gird / list view -->
+  <ng-container
+    *ngTemplateOutlet="template ? template : listView"
+  ></ng-container>
+</article>

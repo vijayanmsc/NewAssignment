@@ -1,0 +1,16 @@
+<div
+  fxLayout="row wrap"
+  fxLayout.lt-sm="column"
+  fxLayoutAlign="space-between center"
+>
+  <article class="user-card-single" *ngFor="let user of users">
+    <header>
+      <img [src]="user.profile_image" alt="team images" />
+      <span class="material-icons card-image-icon">send</span>
+    </header>
+    <main>
+      <h4 class="name">{{ user.name }}</h4>
+      <div class="content">{{ user.job_title }}</div>
+    </main>
+  </article>
+</div>
